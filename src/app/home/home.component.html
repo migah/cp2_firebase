@@ -1,0 +1,18 @@
+<cp-top-toolbar [title]="toolbarTitle" ></cp-top-toolbar>
+
+<h1>Welcome to CP2, we are just getting started!</h1>
+
+<md-card *ngFor="let user of users | async">
+  <fa [name]="'user'" style=""></fa>
+  {{user.email}}
+  <md-card-actions>
+    <button md-button (click)="editUser(user.$key)"><i class="fa fa-wrench" aria-hidden="true"></i></button>
+    <button md-button (click)="deleteUser(user.$key)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+  </md-card-actions>
+</md-card>
+<br>
+<button md-button (click)="createUser()">Add new user</button>
+
+
+
+
