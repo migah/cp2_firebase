@@ -17,6 +17,7 @@ import { LoginViewComponent } from './auth/login/login-view.component';
 import {AuthService} from "./auth/auth.service";
 import {UserService} from "./users/user.service";
 import { EditUserComponent } from './users/edit-user/edit-user.component';
+import {AuthGuard} from "./auth/auth-guard";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDEW3XGdllByuicjqaioZ6jBIGc9zimJLI",
@@ -32,7 +33,7 @@ export const firebarebaseLoginConfig =  {
 }
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent},
   { path: 'login', component: LoginComponent },
   { path: 'edit-user/:$key', component: EditUserComponent}
 ];
